@@ -1,0 +1,24 @@
+.news_section{
+  height: 25vh;
+  background-image:
+  url(../../images/banar-bg.png);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  &_filter{
+    padding: 7rem 2rem;
+    p, span{
+      color: $unnamed-color-ffffff;
+    }
+  }
+  @include respond(tab-land) {
+    &_filter{
+      .tab-res{
+        display: none;
+      }
+    }
+  }
+}
+
+

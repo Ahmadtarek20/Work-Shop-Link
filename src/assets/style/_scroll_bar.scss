@@ -1,0 +1,42 @@
+@import "../style/colors";
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 0;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    //background: $unnamed-color-ba968c;
+}
+
+td
+/* Track */
+
+::-webkit-scrollbar-track,
+.page ::-webkit-scrollbar-track {
+    background: $secondary-bg;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: $unnamed-color-193f3d;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: $unnamed-color-193f3d;
+}

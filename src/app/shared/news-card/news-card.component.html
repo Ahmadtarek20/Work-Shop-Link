@@ -1,0 +1,35 @@
+<div class="news-card  ">
+  <div class="news-card-header">
+    <img *ngIf="newsItem?.urlToImage != null" src="{{newsItem?.urlToImage}}">
+    <img *ngIf="newsItem?.urlToImage == null" src="../../../../../assets/images/banar-bg.png">
+  </div>
+  <div class="news-card-content pointer" [routerLink]="['/news','details', newsItem.id]">
+    <ng-container *ngIf="newsItem?.title?.length > 40">
+      <p>{{newsItem?.title | slice: 0:40}} ....</p>
+    </ng-container>
+    <ng-container *ngIf="newsItem?.title?.length <= 40">
+      <p>{{newsItem?.title}}</p>
+    </ng-container>
+  </div>
+  <div class=" flex justify-between items-center footer-news ">
+    <span> {{newsItem?.published | date: 'fullDate' }}</span>
+    <div>
+      <!-- <i class='bx bx-heart text-lg pointer' *ngIf="newsItem?.liked"></i> -->
+      <span class='bx  text-lg pointer' [class.bx-heart]="!newsItem?.liked" [class.bxs-heart]="newsItem?.liked"
+        (click)="favoriteIcon(newsItem)"></span>
+      <!-- <i class='bx bx-share-alt text-lg pointer'></i> -->
+      <div ngbDropdown class="inline">
+        <i class="bx bx-share-alt text-lg  pointer" id="dropdownBasic1" ngbDropdownToggle></i>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="menue-open rounded-lg">
+          <div ngbDropdownItem class="flex rounded-lg">
+            <div class="text-center bg-blue-800 text-lg w-10"><i class='bx bxl-facebook text-white '></i></div>
+            <div class="text-center bg-blue-400 text-lg w-10"><i class='bx bxl-twitter text-white '></i></div>
+            <div class="text-center bg-red-500 text-lg w-10"><i class='bx bxs-envelope text-white '></i></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,39 @@
+
+@import "../colors";
+.footer{
+  height: 23vh;
+  background-color: $unnamed-color-193f3d;
+
+  .footer_spam{
+    width: 12.4%;
+  }
+  .footer_info{
+   width: 88%;
+
+   .upet-text{
+    text-transform: uppercase;
+   }
+    span, p{
+      color: $unnamed-color-efeeee;
+    }
+  }
+  @include respond(tab-land) {
+    .footer_spam{
+    display: none;
+    }
+    .footer_info{
+      width: 100%;
+    }
+    .tab-res{
+      display: none;
+    }
+  }
+}
+
+.left-zero{
+  margin-left: 0rem;
+}
+.d-non{
+  display: none;
+}
+

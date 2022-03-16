@@ -1,0 +1,10 @@
+<app-header></app-header>
+<div class="relative">
+  <div class="sidebar" [class]="sideBarService.sideBarSubject |async">
+    <app-nav></app-nav>
+  </div>
+  <div class="main-section main" [class]="themeService.peresentThemeSubject | async">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<app-footer></app-footer>

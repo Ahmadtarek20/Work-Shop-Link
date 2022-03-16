@@ -1,0 +1,79 @@
+@import "colors";
+@import "scroll_bar";
+@import "./form";
+@import "./mixin";
+@import "./components/nav";
+@import "./components/navbar";
+@import "./components/home";
+@import "./components/news";
+@import "./components/news-card";
+@import "./components/details";
+@import "./components/loader";
+@import "./components/footer";
+
+
+
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../fonts/Segoe\ UI.ttf');
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+    font-family: 'Segoe UI';
+     //background: $unnamed-color-efeeee;
+    color: $color;
+  }
+  .main {
+    background-color: var(--scandary-bg) !important;
+    color: var(--color) !important;
+  }
+
+span {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17.63px;
+    color: $span_color;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26.46px;
+}
+
+h2 {
+    font-size: 31px;
+    font-weight: 500;
+    line-height: 45.57px;
+}
+
+h3 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17.63px;
+}
+
+.p-4 {
+    padding: 1.3rem !important;
+}
+.pl-4 {
+    padding-left: 1.3rem;
+}
+.pr-4 {
+    padding-right: 1.3rem;
+}
+.pt-4{
+    padding-top: 1.3rem;
+}
+
+.pointer {
+    cursor: pointer;
+}
+

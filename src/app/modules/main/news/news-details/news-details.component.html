@@ -1,0 +1,68 @@
+<div class="news_section">
+  <div class="news_section_filter flex justify-between items-center">
+    <p class="text-3xl mb-2">News</p>
+  </div>
+
+</div>
+
+<div class="component-loader" (errorCallback)="getNewsItem()" [errorMessage]="'error'" component-loader
+  [componentError]="loadingError" [loadingMessage]="'loading'" [componentLoading]="loading">
+  <div class="lg:mx-20 sm:mx-10">
+
+
+
+    <div class="lg:mx-56 md:mx-52 mx-2 my-12 flex flex-wrap">
+      <div class="tab-port-media">
+        <img *ngIf="newsItem?.urlToImage != null" class="news_image_details" src="{{newsItem?.urlToImage}}">
+        <img *ngIf="newsItem?.urlToImage == null" class="news_image_details"
+          src="../../../../../assets/images/banar-bg.png">
+      </div>
+      <div class="lg:mx-7  news_info_details tab-port-info">
+        <div class="head_section">
+          <ng-container *ngIf="newsItem?.title?.length > 40">
+            <p class="font-bold text-3xl">{{newsItem?.title | slice: 0:40}} ....</p>
+          </ng-container>
+          <ng-container *ngIf="newsItem?.title?.length <= 40">
+            <p class="font-bold text-3xl">{{newsItem?.title}}</p>
+          </ng-container>
+
+        </div>
+        <div class="news-card-content flex justify-between items-center footer-news">
+          <span>{{newsItem?.published | date: 'fullDate' }}</span>
+          <div>
+            <span class='bx  text-lg pointer' [class.bx-heart]="!newsItem?.liked" [class.bxs-heart]="newsItem?.liked"
+              (click)="favoriteIcon(newsItem)"></span>
+            <i class='bx bx-share-alt text-lg'></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <section class="paragraph mx-2 lg:mx-56 my-12">
+
+      <ng-container *ngIf="newsItem?.content?.length > 900">
+        <div class="my-2" [innerHTML]="newsItem?.content | slice: 0:900">......</div>
+      </ng-container>
+      <ng-container *ngIf="newsItem?.content?.length <= 900">
+        <div class="my-2" [innerHTML]="newsItem?.content"></div>
+      </ng-container>
+    </section>
+
+    <div class="lg:mx-5 lg:my-12 ">
+      <p class="head_sections md:mx-40 lg:mx-40 mx-2 text-2xl lg:text-3xl font-bold my-2">You might need to see also...
+      </p>
+      <div class=" grid grid-cols-2 gap-3    my-12">
+        <div class="col-span-4 md:col-span-2 row-span-2">
+          <div class="grid md:grid-cols-2 md:gap-2 lg:grid-cols-3 lg:gap-4 grid-cols-1 gap-1">
+            <div class=" mx-2 my-1" *ngFor="let newsItem of newsList">
+              <app-news-card [newsItem]='newsItem'></app-news-card>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>

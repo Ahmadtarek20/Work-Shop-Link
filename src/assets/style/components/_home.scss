@@ -1,0 +1,201 @@
+.banar_section {
+  height: 80vh;
+  background-image:
+  url(../../images/banar-bg.png);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  bottom: 0px;
+}
+.baner_section_info{
+  width: 100%;
+  height: 80vh;
+ }
+ .baner_section_counter{
+   width: 11.9%;
+
+   .section_cercile{
+     width: 10vw;
+     border-radius: 50%;
+     border: 1px solid white;
+   }
+ }
+ .baner_section_data{
+   width: 87%;
+   position: relative;
+   .banar_section_footer{
+     position: absolute;
+     bottom: 0px;
+     right: 0px;
+    //  height: 22vh;
+    max-height: 22vh;
+     .react_investment{
+      background-color: $unnamed-color-193f3d;
+      width: 25%;
+
+     }
+     .investment_sectors{
+      background-color: $unnamed-color-b27208;
+      width: 75%;
+     }
+     @include respond(tab-land) {
+      .investment_sectors{
+        width: 90.5%;
+      }
+     }
+     .foot_spam{
+       width: fit-content;
+       text-transform: uppercase;
+       background-color: rgba(220, 220, 220, 0.251);
+     }
+   }
+ }
+ @include respond(tab-land) {
+  .section_icon_card{
+    width: 45rem;
+  }
+ }
+ @include respond(tab-land) {
+
+  .tab-res-mob{
+    display: none;
+  }
+  .banar_section_footer{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+  }
+ }
+ .icon_arrow{
+  color: $unnamed-color-b27208;
+ }
+ .box_list{
+   width: 80px;
+   height: 80px;
+   background-color: transparent;
+ }
+
+ @include respond(tab-land) {
+  .react_investment, .section_cercile{
+    display: none;
+  }
+  .res-tab-border{
+    border-right: 0px solid transparent;
+  }
+
+  .baner_section_data{
+    padding-left: 0rem;
+    padding-bottom: 0rem;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+.baner-section{
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.baner-section-status {
+  width: 12.2%;
+  height: 100%;
+  background-size: cover;
+  position: relative;
+  background-position: top;
+
+  background-image:
+   url(../../images/banar-label-data.png);
+}
+.baner-section-label {
+ width: 89%;
+ height: 100%;
+ background-size: cover;
+ position: relative;
+//  background-image:
+//   url(../../images/baner-section-status.png);
+background-color: $unnamed-color-193f3d;
+
+.table_status_map{
+  tr{
+    color: $unnamed-color-ffffff;
+}
+ td{
+  color: $border-color;
+  padding-right: 35px;
+  padding-top: 15px;
+}
+
+}
+
+}
+@include respond(tab-land) {
+  .baner-section{
+    display: block;
+  }
+  .baner-section-status{
+    display: none;
+  }
+  .baner-section-label {
+    width: 100%;
+  }
+}
+@include respond(phone) {
+  .table_status_map {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+}
+
+
+.news-section{
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.news-section-data {
+  width: 13%;
+  height: 100%;
+  background-size: cover;
+  position: relative;
+  background-position: top;
+
+  background-image:
+   url(../../images/news-data-section.png);
+}
+.news-section-news-label {
+    width: 86.8%;
+ height: 100%;
+//  max-width: 86.8%;
+}
+
+@include respond(tab-land) {
+  .news-section{
+    display: block;
+  }
+  .news-section-data, .mob-res{
+    display: none;
+  }
+  .news-section-news-label {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

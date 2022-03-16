@@ -1,0 +1,72 @@
+<div class="news_section">
+
+  <div class="news_section_filter flex justify-between items-center">
+    <p class="text-3xl mb-2 tab-res">News</p>
+    <div class="filter_data ">
+      <span>Filter by:</span>
+      <form [formGroup]="filterForm">
+        <div class="flex justify-center items-center">
+          <div class="mb-2 relative ">
+            <input [matDatepicker]="pickId1" name="started-date" formControlName="from" class="form-control date"
+              placeholder="Date" />
+            <mat-datepicker #pickId1></mat-datepicker>
+            <mat-datepicker-toggle class="input-icon date-picker absolute  w-full" [for]="pickId1">
+            </mat-datepicker-toggle>
+          </div>
+          <div class="mb-2 relative ">
+            <input [matDatepicker]="pickId2" name="started-date" formControlName="to" class="form-control date"
+              placeholder="Date" />
+            <mat-datepicker #pickId2></mat-datepicker>
+            <mat-datepicker-toggle class="input-icon date-picker absolute w-full" [for]="pickId2">
+            </mat-datepicker-toggle>
+          </div>
+
+          <div class="form-group ml-2 mb-2 ">
+            <input type="text" class="form-control" formControlName="searchInput" placeholder="Keywords...">
+          </div>
+
+
+
+          <i class='bx bx-search p-2 mx-2 border-solid border-2 border-white rounded-full text-white'
+            (click)="onSubmit()"></i>
+          <i class='bx bx-reset p-2 mx-2 border-solid border-2 border-white rounded-full text-white'
+            (click)="resetFilter()"></i>
+        </div>
+      </form>
+
+      <div class="form-group ml-2 mb-2 ">
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</div>
+
+<div class="component-loader" (errorCallback)="getNewsList()" [errorMessage]="'error'" component-loader
+  [componentError]="loadingError" [loadingMessage]="'loading'" [componentLoading]="loading">
+  <div class="lg:mx-30 sm:mx-20">
+    <div class=" grid grid-cols-2 gap-3  my-12">
+      <div class="col-span-4 md:col-span-2 row-span-2">
+        <div class="grid md:grid-cols-2 md:gap-2 lg:grid-cols-3 lg:gap-4 grid-cols-1 gap-1 ">
+          <div class=" mx-2 my-1 card_options" *ngFor="let newsItem of newsList">
+            <app-news-card [newsItem]='newsItem'></app-news-card>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="flex justify-center items-center mx-16 my-6 text-gray-400">
+    <i class='bx bx-left-arrow-alt  p-2 mx-1 border-solid border-2 border-gray-400 rounded-full text-gray-400 pointer'
+      *ngIf="pageNumber != 1" (click)="previousPage()"></i>
+    Load More
+    <i class='bx bx-right-arrow-alt p-2 mx-2 border-solid border-2 border-gray-400 rounded-full text-gray-400 pointer'
+      *ngIf="pageNumber != pages.length" (click)="nextPage()"></i>
+
+
+  </div>

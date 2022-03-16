@@ -1,0 +1,25 @@
+.head_sections{
+  color: $unnamed-color-193f3d;
+
+}
+.paragraph{
+
+  p{
+    color: $unnamed-color-193f3d;
+  }
+}
+.news_image_details{
+  width: 40rem;
+}
+
+strong{
+  color: $unnamed-color-193f3d;
+  display: block;
+  font-size: x-large;
+}
+
+@include respond(tab-land) {
+  .tab-port-info , .news_image_details{
+   width: 100%;
+  }
+}

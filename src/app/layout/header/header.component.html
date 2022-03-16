@@ -1,0 +1,63 @@
+<header class=" navbar border-b flex items-center justify-between ">
+  <!-- Logo text or image -->
+  <div class="h-full flex items-center justify-between ">
+
+    <img class="mr-5 rad-img pointer" routerLink="/" width="100vh" src="../../../assets/images/LinkDev_white@2x.png">
+
+
+  </div>
+  <!-- END Logo text or image -->
+
+  <!-- Global navigation -->
+
+  <ul class="list-reset flex flex-row items-center p-0">
+
+    <li class="ml-6 res-tab">
+      <div class="py-3  md:text-xl  pointer" (click)="changeTheme()">
+        <img class="mr-5 " src="../../../assets/images/contrast.svg">
+      </div>
+
+    </li>
+    <li class="ml-6 border-right res-tab">
+      <div class="py-3 mb-2 md:text-xl   pointer inline" style="float:left;">
+        <span class="text-sm  text-white">A</span>
+        <span class="text-base  text-white">A</span>
+        <span class="text-lg  text-white">A</span>
+      </div>
+    </li>
+
+    <li class="ml-6 res-tab">
+      <div class="py-3  md:text-xl  pointer">
+        <img class="mr-5 " src="../../../assets/images/Path 58308.svg">
+      </div>
+
+    </li>
+    <li class="ml-6 res-tab">
+      <div class="py-3  md:text-xl   pointer flex justify-center text-center">
+        <p>EN <i class='bx bx-chevron-down'></i>
+        </p>
+      </div>
+    </li>
+
+    <li class="ml-6 border-right res-tab">
+      <div class="py-3  md:text-xl  pointer ">
+        <button class="btn btn-round btn-default mb-2 " type="submit">Sign In</button>
+      </div>
+
+    </li>
+
+    <li class="ml-6 pr-4">
+      <i class='bx bx-menu-alt-right py-3  md:text-xl   pointer' id="btn"
+        *ngIf="sideBarService.sideBarSubject.value == 'close'" (click)="onToggleSideBar()"></i>
+
+      <i class='bx bx-x py-3  md:text-xl   pointer' id="btn" *ngIf="sideBarService.sideBarSubject.value == 'open'"
+        (click)="onToggleSideBar()"></i>
+
+    </li>
+  </ul>
+
+
+
+  <!-- END Global navigation -->
+
+</header>

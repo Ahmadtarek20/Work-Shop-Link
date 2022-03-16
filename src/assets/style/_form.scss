@@ -1,0 +1,214 @@
+
+@import "../style/colors";
+
+.btn {
+    background-color: transparent;
+    border-color: $unnamed-color-ffffff;
+    color:  $unnamed-color-ffffff;
+}
+.btn-round {
+  border-radius: 40px;
+  background-color: transparent;
+  border-color: $unnamed-color-ffffff;
+  color:  $unnamed-color-ffffff;
+
+}
+
+
+.form-control {
+    display: block;
+    width: 75%;
+    min-width: 50px;
+    font-size: 1rem !important;
+    font-weight: 400;
+    line-height: 1.0;
+    color: $color;
+    background-color: transparent !important;
+    background-clip: padding-box;
+    border: 1px solid $border-color !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    border-radius: 1rem !important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -moz-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -ms-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -o-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-control:focus {
+  border-color:  $unnamed-color-b27208 !important ;
+ }
+
+.date-picker{
+  bottom: 0rem;
+  left: -2rem;
+  transform: rotate(180deg);
+}
+.form-control:focus {
+    border: 0px !important;
+    outline: 0;
+  }
+
+.btn-primary {
+    margin: 2px;
+    color: #fff;
+    background-color: transparent;
+    border-color: $unnamed-color-ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.btn-default {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.btn-primary:hover ,.btn-primary:active , .btn-primary:focus, .btn-primary:disabled {
+    color: #fff;
+    background-color: transparent;
+    border-color: $unnamed-color-ffffff;
+}
+
+.btn-primary:focus ,.form-control:focus .btn-default:focus ,.btn-default:active {
+    box-shadow: 0 0 0 0.25rem $unnamed-color-193f3d !important;
+}
+.form-select{
+  border-radius: 1rem ;
+}
+.form-select:focus ,.form-check-input:focus{
+    border-color: transparent;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem $unnamed-color-193f3d;
+    border: 1px solid #fff;
+  }
+
+  .form-check-input:checked {
+    background-color: $unnamed-color-a41a25;
+    border-color: $unnamed-color-a41a25;
+    border: 1px solid #fff;
+}
+
+.form-check-input:hover ,.form-check-input:active , .form-check-input:focus{
+    color:$unnamed-color-a41a25;
+    border: 1px solid $unnamed-color-a41a25;
+}
+
+
+.form-switch .form-check-input:checked {
+    background-size: auto !important;
+}
+
+
+
+
+.modal-header {
+    border-bottom: 0px solid $unnamed-color-193f3d;
+    background-color: $unnamed-color-193f3d;
+}
+
+.form-group label{
+    margin-bottom: 4px;
+}
+
+.form-group ,.form-check{
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.form-floating>label {
+    left: auto;
+}
+
+
+
+.file{
+    .form-control {
+        padding: .375rem .75rem !important;
+    }
+}
+
+.ng-select .ng-select-container {
+    color: $color;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid $unnamed-color-193f3d;
+    min-height: 42px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.ng-select.ng-select-focused:not(.ng-select-opened)>.ng-select-container{
+    box-shadow: 0 0 0 0.1rem $unnamed-color-193f3d;
+    border-color: transparent;
+}
+
+.ng-select span {
+    color: $color;
+}
+
+.mat-dialog-container {
+    height: auto !important;
+    overflow-y: scroll !important;
+}
+
+.cdk-overlay-pane {
+    overflow: hidden;
+    border-radius: 45px;
+}
+
+.modal-content .form-check{
+
+    border: 1px solid $unnamed-color-b27208 !important;
+    border-radius: 1rem;
+    height: calc(100% - 15px);
+}
+.form-floating>label {
+    top: -8px;
+}
+.form-floating>input {
+ line-height: 0.5;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+
+}
+
+.ng-option.ng-option-disabled span{
+    font-weight: bold !important;
+}
+
+textarea.form-control {
+    height: 42px;
+}
+
+.btn-head{
+  width: 110px;
+}
+
+@media (max-width:767px) {
+    .form-check{
+        margin-bottom: 17px;
+        padding: 15px 0px;
+    }
+
+}
+
+
+
+
