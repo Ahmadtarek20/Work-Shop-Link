@@ -38,6 +38,7 @@
       background-color: $unnamed-color-b27208;
       width: 75%;
      }
+
      @include respond(tab-land) {
       .investment_sectors{
         width: 90.5%;

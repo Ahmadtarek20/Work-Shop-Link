@@ -32,10 +32,32 @@
       </div>
 
     </li>
-    <li class="ml-6 res-tab">
+    <!-- <li class="ml-6 res-tab">
       <div class="py-3  md:text-xl   pointer flex justify-center text-center">
         <p>EN <i class='bx bx-chevron-down'></i>
         </p>
+      </div>
+    </li> -->
+    <li class="ml-6 res-tab">
+      <div class="py-3  md:text-xl   pointer flex justify-center text-center" ngbDropdown>
+        <p *ngIf="languageService.langauge.value == 'ar'" id="dropdownBasic1" ngbDropdownToggle>AR <i
+            class='bx bx-chevron-down'></i>
+        </p>
+        <p *ngIf="languageService.langauge.value == 'en'" id="dropdownBasic1" ngbDropdownToggle>EN <i
+            class='bx bx-chevron-down'></i>
+        </p>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="menue-open">
+          <button ngbDropdownItem (click)="changeLanguage()" class="sm:text-sm text-center"
+            *ngIf="languageService.langauge.value == 'en'">AR</button>
+          <button ngbDropdownItem (click)="changeLanguage()" class="sm:text-sm text-center"
+            *ngIf="languageService.langauge.value == 'ar'">EN</button>
+
+          <!-- <i class='bx bx-arrow-back' *ngIf="languageService.langauge.value == 'ar'"></i> <i
+            class='bx bx-right-arrow-alt' *ngIf="languageService.langauge.value == 'en'"></i> -->
+
+
+        </div>
+
       </div>
     </li>
 
