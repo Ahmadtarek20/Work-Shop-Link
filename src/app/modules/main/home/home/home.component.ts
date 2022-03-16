@@ -1,4 +1,5 @@
 import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
+import { ChangeLanguageService } from 'src/app/core/services/change-language.service';
 import { BANARAS } from 'src/app/Models/banaras';
 import { OPPORTUNITIES } from 'src/app/Models/opportunities';
 import { NewsService } from 'src/app/services/api/news.service';
@@ -22,6 +23,8 @@ export class HomeComponent implements OnInit {
   secondDataOfBanner: any;
   constructor(
     private newsService: NewsService,
+    public languageService: ChangeLanguageService,
+
   ) { }
 
   ngOnInit() {

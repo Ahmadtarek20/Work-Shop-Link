@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ChangeLanguageService } from 'src/app/core/services/change-language.service';
 import { NewsService } from 'src/app/services/api/news.service';
 import { News } from './../../../../Models/news';
 
@@ -19,6 +20,8 @@ export class NewsListComponent implements OnInit {
   loading = false
   constructor(
     private newsService: NewsService,
+    public languageService: ChangeLanguageService,
+
   ) { }
 
   filterForm = new FormGroup({

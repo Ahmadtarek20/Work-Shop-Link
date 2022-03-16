@@ -6,11 +6,22 @@
 
       <div class="section_cercile px-11 py-16">
         <div class="flex justify-center items-center">
-          <i class='bx bx-left-arrow-alt pointer p-2 mx-2 icon_arrow text-6xl' (click)="previous()"></i>
+          <i class='bx bx-right-arrow-alt pointer p-2 mx-2 icon_arrow text-6xl'
+            *ngIf="languageService.langauge.value == 'ar'" (click)="previous()"></i>
+
+          <i class='bx bx-left-arrow-alt pointer p-2 mx-2 icon_arrow text-6xl'
+            *ngIf="languageService.langauge.value == 'en'" (click)="previous()"></i>
           <div class="text-center">
             <span class=" text-6xl text-white">{{numberOfBanner}}</span>
           </div>
-          <i class='bx bx-right-arrow-alt pointer p-2 mx-2 icon_arrow text-6xl' (click)="next()"></i>
+          <i class='bx bx-right-arrow-alt pointer p-2 mx-2 icon_arrow text-6xl'
+            *ngIf="languageService.langauge.value == 'en'" (click)="next()"></i>
+
+          <i class='bx bx-left-arrow-alt pointer p-2 mx-2 icon_arrow text-6xl'
+            *ngIf="languageService.langauge.value == 'ar'" (click)="next()"></i>
+
+
+
         </div>
         <div class="text-center">
           <span class=" text-3xl text-white">/ {{banaras.length}}</span>
@@ -30,7 +41,10 @@
         <div class="flex justify-start my-1 tab-res-mob">
           <div class=" border-solid border-2 border-white rounded-full pointer" (click)="next()">
             <span class="text-white block pt-1 mx-2">More</span>
-            <i class='bx bx-right-arrow-alt text-white p-1 mx-2'></i>
+            <i class='bx bx-right-arrow-alt text-white p-1 mx-2' *ngIf="languageService.langauge.value == 'en'"></i>
+            <i class='bx bx-arrow-back text-white p-1 mx-2' *ngIf="languageService.langauge.value == 'ar'"></i>
+
+
           </div>
         </div>
 
@@ -45,7 +59,11 @@
             <div class="flex justify-start my-10 ">
               <div class="  border-solid border-2 border-white rounded-full">
                 <span class="text-white block pt-1 mx-2">More</span>
-                <i class='bx bx-right-arrow-alt icon_arrow p-1 mx-2'></i>
+                <i class='bx bx-right-arrow-alt icon_arrow p-1 mx-2' *ngIf="languageService.langauge.value == 'en'"></i>
+                <i class='bx bx-arrow-back icon_arrow p-1 mx-2' *ngIf="languageService.langauge.value == 'ar'"></i>
+
+
+
               </div>
             </div>
           </div>
@@ -54,7 +72,8 @@
           <div class="flex justify-between h-10 items-start ">
             <span class="foot_spam text-white p-2">Investment Sectors</span>
             <div class=" mx-16  text-white pointer tab-res-mob">More <i
-                class='bx bx-right-arrow-alt p-2 mx-2 border-solid border-2 border-white rounded-full text-white'></i>
+                class='bx bx-right-arrow-alt text-white p-1 mx-2' *ngIf="languageService.langauge.value == 'en'"></i>
+              <i class='bx bx-arrow-back text-white p-1 mx-2' *ngIf="languageService.langauge.value == 'ar'"></i>
             </div>
           </div>
 
@@ -130,7 +149,8 @@
         </tr>
       </table>
       <div class="flex justify-start items-center my-4  text-white pointer">More <i
-          class='bx bx-right-arrow-alt p-2 mx-2 border-solid border-2 border-white rounded-full text-white'></i>
+          class='bx bx-right-arrow-alt text-white p-1 mx-2' *ngIf="languageService.langauge.value == 'en'"></i>
+        <i class='bx bx-arrow-back text-white p-1 mx-2' *ngIf="languageService.langauge.value == 'ar'"></i>
       </div>
     </div>
   </div>
@@ -142,8 +162,11 @@
 <div class="news-section">
   <div class="news-section-data border-right"></div>
   <div class="news-section-news-label ">
-    <div class="flex justify-end items-center mx-16 my-6 text-gray-400 pointer" [routerLink]="['/news']">More <i
-        class='bx bx-right-arrow-alt p-2 mx-2 border-solid border-2 border-gray-400 rounded-full text-gray-400'></i>
+    <div class="flex justify-end items-center mx-16 my-6 text-gray-400 pointer" [routerLink]="['/news']">More
+      <i class='bx bx-right-arrow-alt  p-1 mx-2 border-solid border-2 border-gray-400 rounded-full text-gray-400'
+        *ngIf="languageService.langauge.value == 'en'"></i>
+      <i class='bx bx-arrow-back  p-1 mx-2 border-solid border-2 border-gray-400 rounded-full text-gray-400'
+        *ngIf="languageService.langauge.value == 'ar'"></i>
     </div>
 
     <div class="component-loader" (errorCallback)="getNewsList()" [errorMessage]="'error'" component-loader
@@ -170,8 +193,22 @@
     </div>
 
     <div class="flex justify-center items-center  mob-res">
-      <i class='bx bx-left-arrow-alt  p-2 mx-1 border-solid border-2 border-gray-400 rounded-full text-gray-400'></i>
-      <i class='bx bx-right-arrow-alt  p-2 mx-1 border-solid border-2 border-gray-400 rounded-full text-gray-400'></i>
+      <i class='bx bx-left-arrow-alt  p-2 mx-1 border-solid border-2 border-gray-400 rounded-full text-gray-400'
+        *ngIf="languageService.langauge.value == 'en'"></i>
+      <i class='bx bx-right-arrow-alt  p-2 mx-1 border-solid border-2 border-gray-400 rounded-full text-gray-400'
+        *ngIf="languageService.langauge.value == 'en'"></i>
+
+
+
+      <i class='bx bx-right-arrow-alt  p-2 mx-1 border-solid border-2 border-gray-400 rounded-full text-gray-400'
+        *ngIf="languageService.langauge.value == 'ar'"></i>
+      <i class='bx bx-arrow-back  p-2 mx-1 border-solid border-2 border-gray-400 rounded-full text-gray-400'
+        *ngIf="languageService.langauge.value == 'ar'"></i>
+
+
+
+
+
     </div>
   </div>
 </div>

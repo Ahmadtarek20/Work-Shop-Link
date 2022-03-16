@@ -62,11 +62,21 @@
 
   </div>
   <div class="flex justify-center items-center mx-16 my-6 text-gray-400">
+    <i class='bx bx-right-arrow-alt p-2 mx-1 border-solid border-2 border-gray-400 rounded-full text-gray-400 pointer'
+      *ngIf="pageNumber != 1 && languageService.langauge.value == 'ar'" (click)="previousPage()"></i>
+
     <i class='bx bx-left-arrow-alt  p-2 mx-1 border-solid border-2 border-gray-400 rounded-full text-gray-400 pointer'
-      *ngIf="pageNumber != 1" (click)="previousPage()"></i>
+      *ngIf="pageNumber != 1 && languageService.langauge.value == 'en'" (click)="previousPage()"></i>
+
     Load More
     <i class='bx bx-right-arrow-alt p-2 mx-2 border-solid border-2 border-gray-400 rounded-full text-gray-400 pointer'
-      *ngIf="pageNumber != pages.length" (click)="nextPage()"></i>
+      *ngIf="pageNumber != pages.length && languageService.langauge.value == 'en'" (click)="nextPage()"></i>
+
+
+    <i class='bx bx-left-arrow-alt p-2 mx-2 border-solid border-2 border-gray-400 rounded-full text-gray-400 pointer'
+      *ngIf="pageNumber != pages.length && languageService.langauge.value == 'ar'" (click)="nextPage()"></i>
+
+
 
 
   </div>
