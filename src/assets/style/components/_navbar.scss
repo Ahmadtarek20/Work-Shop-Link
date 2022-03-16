@@ -1,60 +1,63 @@
 @import "../colors";
-.dropdown-toggle::after {
-    display: none;
-}
-.dropup .dropdown-toggle::after{
-    display: none;
-}
+@mixin biDirectional($start, $end) {
+  .dropdown-toggle::after {
+      display: none;
+  }
+  .dropup .dropdown-toggle::after{
+      display: none;
+  }
 
-.dropdown-menu-social{
-  position: absolute;
-  top: 0px !important;
-  left: -9rem !important;
-  transform: translate(0px, 24px);
-  min-width: 0rem;
-  padding: .0rem 0;
-  margin: 0;
-  border: 0px solid rgba(0,0,0,.15);
-}
-.menue-open {
-    margin-top: 35px;
-}
-.dropdown-item{
-  padding: .0rem 0;
-}
-
-.navbar {
+  .dropdown-menu-social{
     position: absolute;
-    left: 0;
-    right: 0;
-    background-color: transparent;
-    height: 80px;
-    z-index: 100;
-    padding: 1px;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    top: 0px !important;
+    #{$start}: -9rem !important;
+    transform: translate(0px, 24px);
+    min-width: 0rem;
+    padding: .0rem 0;
+    margin: 0;
+    border: 0px solid rgba(0,0,0,.15);
+  }
+  .menue-open {
+      margin-top: 35px;
+  }
+  .dropdown-item{
+    padding: .0rem 0;
+  }
 
-    i,p{
-      color:  $unnamed-color-ffffff;
-    }
+  .navbar {
+      position: absolute;
+      #{$start}: 0;
+      #{$end}: 0;
+      background-color: transparent;
+      height: 80px;
+      z-index: 100;
+      padding: 1px;
+      padding-#{$start}: 5rem;
+      padding-#{$end}: 5rem;
+
+      i,p{
+        color:  $unnamed-color-ffffff;
+      }
+  }
+
+  .border-right{
+    border-#{$end}: 1px solid $border-color;
+    padding-#{$end}: 20px;
+  }
+  .border-bottom{
+    border-bottom: 1px solid $border-color;
+  }
+  .border-left{
+    border-#{$start}: 1px solid $border-color;
+    padding-#{$start}: 20px;
+  }
+
+
+  @include respond(tab-port) {
+   .list-reset .res-tab{
+     display: none;
+   }
+  }
 }
 
-.border-right{
-  border-right: 1px solid $border-color;
-  padding-right: 20px;
-}
-.border-bottom{
-  border-bottom: 1px solid $border-color;
-}
-.border-left{
-  border-left: 1px solid $border-color;
-  padding-left: 20px;
-}
-
-
-@include respond(tab-port) {
- .list-reset .res-tab{
-   display: none;
- }
-}
-
+@import '../direction';

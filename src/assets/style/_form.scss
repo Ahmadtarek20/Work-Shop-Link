@@ -157,45 +157,13 @@
     overflow-y: scroll !important;
 }
 
-.cdk-overlay-pane {
-    overflow: hidden;
-    border-radius: 45px;
-}
 
-.modal-content .form-check{
 
-    border: 1px solid $unnamed-color-b27208 !important;
-    border-radius: 1rem;
-    height: calc(100% - 15px);
-}
-.form-floating>label {
-    top: -8px;
-}
-.form-floating>input {
- line-height: 0.5;
-}
-
-.modal-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    pointer-events: auto;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 0px solid rgba(0,0,0,.2);
-    border-radius: .3rem;
-    outline: 0;
-
-}
 
 .ng-option.ng-option-disabled span{
     font-weight: bold !important;
 }
 
-textarea.form-control {
-    height: 42px;
-}
 
 .btn-head{
   width: 110px;
