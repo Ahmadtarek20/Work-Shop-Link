@@ -1,4 +1,6 @@
 import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
+import { BANARAS } from 'src/app/Models/banaras';
+import { OPPORTUNITIES } from 'src/app/Models/opportunities';
 import { NewsService } from 'src/app/services/api/news.service';
 ;
 
@@ -12,8 +14,8 @@ export class HomeComponent implements OnInit {
   newsList = [];
   loadingError = false
   loading = false
-  banaras: any = [];
-  opportunities: any = [];
+  banaras: any = BANARAS;
+  opportunities: any = OPPORTUNITIES;
   numberOfBanner: any;
   labelOfBanner: any;
   dataOfBanner: any;
@@ -23,29 +25,12 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
-    this.banaras = [
-      { id: 1, label: 'MISSION', data: 'YOUR BUSINESS', secondData: 'EXPANSION DESTINATION' },
-      { id: 2, label: 'OutSource', data: 'Global IT', secondData: 'Engineering Experts' },
-      { id: 3, label: 'DEPLOY', data: 'ACCELERATE', secondData: 'BUSINESS PRODUCTIVITY' },
-      { id: 4, label: 'BUILD', data: 'FUTURISTIC', secondData: 'DIGITAL PLATFORMS' }
-    ]
-    this.opportunities = [
-      { country: "Nigeria", sectors: "Real estate, Tourism", opportunity: 446 },
-      { country: "Ethiopia", sectors: "Agriculture, Healthtech", opportunity: 557 },
-      { country: "Egypt", sectors: "Real estate, Tourism", opportunity: 586 },
-      { country: "Tanzania", sectors: "Fintech", opportunity: 226 },
-      { country: "Kenya", sectors: "Healthtech", opportunity: 287 },
-      { country: "Uganda", sectors: "Real estate", opportunity: 227 },
-      { country: "Algeria", sectors: "Agriculture, Healthtech", opportunity: 27 },
-      { country: "Sudan", sectors: "Tourism", opportunity: 775 },
-    ]
     this.resetBanner()
     this.getNewsList();
-    document.getElementsByClassName('d-non')[0].className = 'footer_spam border-right';
 
     document.getElementsByClassName('nav_list')[0].className = 'nav_list  border-bottom border-left';
     document.getElementsByClassName('nav_list_footer')[0].className = 'nav_list_footer flex justify-between text-center px-6 border-left';
+    document.getElementsByClassName('footer_spam')[0].className = 'footer_spam border-right';
   }
   getNewsList() {
     this.loading = true
