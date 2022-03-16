@@ -14,10 +14,8 @@
   <div class=" flex justify-between items-center footer-news ">
     <span> {{newsItem?.published | date: 'fullDate' }}</span>
     <div>
-      <!-- <i class='bx bx-heart text-lg pointer' *ngIf="newsItem?.liked"></i> -->
       <span class='bx  text-lg pointer' [class.bx-heart]="!newsItem?.liked" [class.bxs-heart]="newsItem?.liked"
         (click)="favoriteIcon(newsItem)"></span>
-      <!-- <i class='bx bx-share-alt text-lg pointer'></i> -->
       <div ngbDropdown class="inline">
         <i class="bx bx-share-alt text-lg  pointer" id="dropdownBasic1" ngbDropdownToggle></i>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="rounded-lg dropdown-menu-social">
