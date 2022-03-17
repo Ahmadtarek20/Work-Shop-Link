@@ -14,10 +14,10 @@
   <div class=" flex justify-between items-center footer-news ">
     <span> {{newsItem?.published | date: 'fullDate' }}</span>
     <div>
-      <span class='bx  text-lg pointer' [class.bx-heart]="!newsItem?.liked" [class.bxs-heart]="newsItem?.liked"
+      <span class='bx  text-2xl pointer' [class.bx-heart]="!newsItem?.liked" [class.bxs-heart]="newsItem?.liked"
         (click)="favoriteIcon(newsItem)"></span>
       <div ngbDropdown class="inline">
-        <i class="bx bx-share-alt text-lg  pointer" id="dropdownBasic1" ngbDropdownToggle></i>
+        <i class="bx bx-share-alt text-2xl  pointer" id="dropdownBasic1" ngbDropdownToggle></i>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="rounded-lg dropdown-menu-social">
           <div ngbDropdownItem class="flex rounded-lg">
             <div class="text-center bg-blue-800 text-lg w-10"><i class='bx bxl-facebook text-white '></i></div>

@@ -1,6 +1,6 @@
 <div class="news_section">
   <div class="news_section_filter flex justify-between items-center">
-    <p class="text-3xl mb-2">News</p>
+    <p class="text-3xl mb-2 pointer" [routerLink]="['/news']">News</p>
   </div>
 
 </div>
@@ -30,9 +30,9 @@
         <div class="news-card-content flex justify-between items-center footer-news">
           <span>{{newsItem?.published | date: 'fullDate' }}</span>
           <div>
-            <span class='bx  text-lg pointer' [class.bx-heart]="!newsItem?.liked" [class.bxs-heart]="newsItem?.liked"
+            <span class='bx  text-2xl pointer' [class.bx-heart]="!newsItem?.liked" [class.bxs-heart]="newsItem?.liked"
               (click)="favoriteIcon(newsItem)"></span>
-            <i class='bx bx-share-alt text-lg'></i>
+            <i class='bx bx-share-alt text-2xl'></i>
           </div>
         </div>
 
