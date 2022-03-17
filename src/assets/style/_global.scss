@@ -1,7 +1,7 @@
-@import "colors";
-@import "scroll_bar";
-@import "./form";
-@import "./mixin";
+@import "abstract/colors";
+@import "abstract/scroll_bar";
+@import "./abstract/form";
+@import "./abstract/mixin";
 @import "./components/nav";
 @import "./components/navbar";
 @import "./components/home";

@@ -1,4 +1,4 @@
-@import "../colors";
+@import "../abstract/colors";
 @mixin biDirectional($start, $end) {
   .sidebar {
     position: fixed;
@@ -162,4 +162,4 @@
   }
 }
 
-@import '../direction';
+@import '../abstract/direction';

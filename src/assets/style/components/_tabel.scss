@@ -1,4 +1,4 @@
-@import "../colors";
+@import "../abstract/colors";
 @mixin biDirectional($start, $end) {
 
   .table_status_map{
@@ -13,5 +13,5 @@
 
   }
 }
-@import '../direction';
+@import '../abstract/direction';
 
