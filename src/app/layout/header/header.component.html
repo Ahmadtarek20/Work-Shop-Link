@@ -38,14 +38,10 @@
         <p id="dropdownBasic1" ngbDropdownToggle>{{ "SYSTEM_LANGUAGE_SELECTED" |
           translate }} <i class='bx bx-chevron-down'></i>
         </p>
-        <!-- <p *ngIf="languageService.langauge.value == 'en'" id="dropdownBasic1" ngbDropdownToggle>EN <i
-            class='bx bx-chevron-down'></i>
-        </p> -->
+
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="menue-open">
           <button ngbDropdownItem (click)="changeLanguage()" class="sm:text-sm text-center">{{ "SYSTEM_LANGUAGE" |
             translate }}</button>
-          <!-- <button ngbDropdownItem (click)="changeLanguage()" class="sm:text-sm text-center"
-            *ngIf="languageService.langauge.value == 'ar'">EN</button> -->
 
 
 
@@ -57,7 +53,8 @@
 
     <li class="ml-6 border-right res-tab">
       <div class="py-3  md:text-xl  pointer ">
-        <button class="btn btn-round btn-default mb-2 " type="submit">Sign In</button>
+        <button class="btn btn-round btn-default mb-2 " type="submit">{{ "SIGN_IN" |
+          translate }}</button>
       </div>
 
     </li>

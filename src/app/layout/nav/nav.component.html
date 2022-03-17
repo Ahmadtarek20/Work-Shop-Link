@@ -5,36 +5,43 @@
   <ul class="nav_list border-left border-bottom">
     <li>
       <a routerLink="" class="link">
-        <p class="links_name">Why Invest </p>
+        <p class="links_name">{{ "WHY_INVEST" |
+          translate }}</p>
       </a>
     </li>
     <li>
       <a class="link">
-        <p class="links_name">About</p>
+        <p class="links_name">{{ "ABOUT" |
+          translate }}</p>
       </a>
     </li>
     <li>
       <a class="link ">
-        <p class="links_name">Industries</p>
+        <p class="links_name">{{ "INDUSTRIES" |
+          translate }}</p>
       </a>
     </li>
     <li>
       <a class="link ">
-        <p class="links_name">Programs & Incentives</p>
+        <p class="links_name">{{ "PROGRAMS_INCENTIVES" |
+          translate }}</p>
       </a>
     </li>
     <li>
       <a class="link ">
-        <p class="links_name">Locations</p>
+        <p class="links_name">{{ "LOCATIONS" |
+          translate }}</p>
       </a>
     </li>
     <li>
       <div class="flex justify-between ">
-        <a class="link ">
-          <p class="links_name">News</p>
+        <a class="link " [routerLink]="['/news']">
+          <p class="links_name">{{ "NEWS" |
+            translate }}</p>
         </a>
         <div class="re-phone">
-          <p class=" text-white">Follow us</p>
+          <p class=" text-white">{{ "FOLLOW_US" |
+            translate }}</p>
           <div class="flex justify-center  text-white">
             <i class='bx bxl-facebook mx-1'></i>
             <i class='bx bxl-twitter mx-1'></i>
@@ -51,10 +58,12 @@
 
   <footer class="nav_list_footer border-left flex justify-between text-center px-6">
     <div class="mx-12">
-      <span class="text-gray-200">Privacy Policy | Terms of Use</span>
+      <span class="text-gray-200">{{ "PRIVACY_POLICY" |
+        translate }}</span>
     </div>
     <div class="mx-12">
-      <span class="text-gray-400">© 2022 Linkdevelopment Sub From A15</span>
+      <span class="text-gray-400">{{ "COUPE_DATA" |
+        translate }}</span>
     </div>
   </footer>
 

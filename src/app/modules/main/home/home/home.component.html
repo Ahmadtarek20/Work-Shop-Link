@@ -39,7 +39,7 @@
 
         <div class="flex justify-start my-1 tab-res-mob">
           <div class=" border-solid border-2 border-white rounded-full pointer" (click)="next()">
-            <span class="text-white block pt-1 mx-2">More</span>
+            <span class="text-white block pt-1 mx-2">{{ "MORE" |translate }}</span>
             <i class='bx bx-right-arrow-alt text-white p-1 mx-2' *ngIf="languageService.langauge.value == 'en'"></i>
             <i class='bx bx-arrow-back text-white p-1 mx-2' *ngIf="languageService.langauge.value == 'ar'"></i>
           </div>
@@ -50,12 +50,12 @@
 
       <div class="banar_section_footer  lg:pl-24 flex">
         <div class="react_investment p-4">
-          <span class="foot_spam text-white p-2 block">Recent Investment Announcements</span>
+          <span class="foot_spam text-white p-2 block">{{ "INVESTMENT_SECTORS" |translate }}</span>
           <div class="flex">
-            <p class="text-white p-2 text-lg">Navigating the Opportunities of Africa's Logistics Sector</p>
+            <p class="text-white p-2 text-lg">{{ "INVESTMENT_SECTORS_MASS" |translate }}</p>
             <div class="flex justify-start my-10 ">
               <div class="  border-solid border-2 border-white rounded-full">
-                <span class="text-white block pt-1 mx-2">More</span>
+                <span class="text-white block pt-1 mx-2">{{ "MORE" |translate }}</span>
                 <i class='bx bx-right-arrow-alt icon_arrow p-1 mx-2' *ngIf="languageService.langauge.value == 'en'"></i>
                 <i class='bx bx-arrow-back icon_arrow p-1 mx-2' *ngIf="languageService.langauge.value == 'ar'"></i>
 
@@ -67,8 +67,8 @@
         </div>
         <div class="investment_sectors p-4 ">
           <div class="flex justify-between h-10 items-start ">
-            <span class="foot_spam text-white p-2">Investment Sectors</span>
-            <div class=" mx-16  text-white pointer tab-res-mob">More <i
+            <span class="foot_spam text-white p-2">{{ "INVESTMENT_ANNOUNCEMENTS" |translate }}</span>
+            <div class=" mx-16  text-white pointer tab-res-mob">{{ "MORE" |translate }} <i
                 class='bx bx-right-arrow-alt text-white p-1 mx-2' *ngIf="languageService.langauge.value == 'en'"></i>
               <i class='bx bx-arrow-back text-white p-1 mx-2' *ngIf="languageService.langauge.value == 'ar'"></i>
             </div>
@@ -140,9 +140,9 @@
     <div class="px-14 py-12">
       <table class="table_status_map ">
         <tr>
-          <th>Country</th>
-          <th>Selectors</th>
-          <th>Opportunities</th>
+          <th>{{ "COUNTRY" |translate }} </th>
+          <th>{{ "SELECTORS" |translate }} </th>
+          <th>{{ "OPPORTUNITIES" |translate }} </th>
         </tr>
         <tr *ngFor="let item of opportunities">
           <td class="my-3">{{item?.country}}</td>
@@ -150,7 +150,7 @@
           <td class="my-3">{{item?.opportunity}}</td>
         </tr>
       </table>
-      <div class="flex justify-start items-center my-4  text-white pointer">More <i
+      <div class="flex justify-start items-center my-4  text-white pointer">{{ "MORE" |translate }} <i
           class='bx bx-right-arrow-alt text-white p-1 mx-2' *ngIf="languageService.langauge.value == 'en'"></i>
         <i class='bx bx-arrow-back text-white p-1 mx-2' *ngIf="languageService.langauge.value == 'ar'"></i>
       </div>
@@ -166,7 +166,8 @@
 <div class="news-section">
   <div class="news-section-data border-right"></div>
   <div class="news-section-news-label ">
-    <div class="flex justify-end items-center mx-16 my-6 text-gray-400 pointer" [routerLink]="['/news']">More
+    <div class="flex justify-end items-center mx-16 my-6 text-gray-400 pointer" [routerLink]="['/news']"> {{ "MORE"
+      |translate }}
       <i class='bx bx-right-arrow-alt  p-1 mx-2 border-solid border-2 border-gray-400 rounded-full text-gray-400'
         *ngIf="languageService.langauge.value == 'en'"></i>
       <i class='bx bx-arrow-back  p-1 mx-2 border-solid border-2 border-gray-400 rounded-full text-gray-400'

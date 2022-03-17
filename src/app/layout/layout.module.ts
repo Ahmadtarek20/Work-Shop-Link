@@ -14,6 +14,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { createTranslateLoader } from '../app.module';
 
 
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -22,9 +23,7 @@ import { createTranslateLoader } from '../app.module';
   ],
   imports: [
     CommonModule,
-
     NgbModule,
-
     NgSelectModule,
     RouterModule,
 

@@ -20,7 +20,7 @@ export class NewsDetailsComponent implements OnInit {
   loadingError = false
   loading = false
   constructor(
-    private newsService: NewsService, private activatedRoute: ActivatedRoute
+    private newsService: NewsService, private activatedRoute: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {

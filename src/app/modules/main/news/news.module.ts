@@ -35,13 +35,14 @@ import { createTranslateLoader } from 'src/app/app.module';
     MatNativeDateModule,
 
     //Translate
-    TranslateModule.forRoot({
+    TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
-        useFactory: (createTranslateLoader),
-        deps: [HttpClient]
-      }
+        useFactory: createTranslateLoader,
+        deps: [HttpClient],
+      },
     }),
+
   ]
 })
 export class NewsModule { }

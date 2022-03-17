@@ -1,28 +1,32 @@
 <div class="news_section">
 
   <div class="news_section_filter flex justify-between items-center">
-    <p class="text-3xl mb-2 tab-res pointer" [routerLink]="['/news']">News</p>
+    <p class="text-3xl mb-2 tab-res pointer" [routerLink]="['/news']">{{ "NEWS" |
+      translate }}</p>
     <div class="filter_data ">
-      <span>Filter by:</span>
+      <span>{{ "FILTER_BY" |
+        translate }}:</span>
       <form [formGroup]="filterForm">
         <div class="flex justify-center items-center">
           <div class="form-group ml-2 mb-2 relative ">
             <input [matDatepicker]="pickId1" name="started-date" formControlName="from" class="form-control"
-              placeholder="By Date From" />
+              [placeholder]="'DATE_FROM' | translate" />
+
             <mat-datepicker #pickId1></mat-datepicker>
             <mat-datepicker-toggle class=" absolute top-0 w-full flex justify-end" [for]="pickId1">
             </mat-datepicker-toggle>
           </div>
           <div class="form-group ml-2 mb-2 relative ">
             <input [matDatepicker]="pickId2" name="started-date" formControlName="to" class="form-control"
-              placeholder="By Date To" />
+              [placeholder]="'DATE_TO' | translate" />
             <mat-datepicker #pickId2></mat-datepicker>
             <mat-datepicker-toggle class=" absolute top-0 w-full flex justify-end" [for]="pickId2">
             </mat-datepicker-toggle>
           </div>
 
           <div class="form-group ml-2 mb-2 ">
-            <input type="text" class="form-control" formControlName="searchInput" placeholder="Keywords...">
+            <input type="text" class="form-control" formControlName="searchInput"
+              [placeholder]="'KEYWORDS' | translate">
           </div>
 
 
@@ -68,7 +72,7 @@
     <i class='bx bx-left-arrow-alt  p-2 mx-1 border-solid border-2 border-gray-400 rounded-full text-gray-400 pointer'
       *ngIf="pageNumber != 1 && languageService.langauge.value == 'en'" (click)="previousPage()"></i>
 
-    Load More
+    {{ "LOAD_MORE" |translate }}
     <i class='bx bx-right-arrow-alt p-2 mx-2 border-solid border-2 border-gray-400 rounded-full text-gray-400 pointer'
       *ngIf="pageNumber != pages.length && languageService.langauge.value == 'en'" (click)="nextPage()"></i>
 

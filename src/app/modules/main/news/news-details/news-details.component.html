@@ -1,6 +1,7 @@
 <div class="news_section">
   <div class="news_section_filter flex justify-between items-center">
-    <p class="text-3xl mb-2 pointer" [routerLink]="['/news']">News</p>
+    <p class="text-3xl mb-2 pointer" [routerLink]="['/news']">{{ "NEWS" |
+      translate }}</p>
   </div>
 
 </div>
@@ -52,7 +53,8 @@
     </section>
 
     <div class="lg:mx-5  py-12">
-      <p class="head_sections md:mx-40 lg:mx-40 mx-2 text-2xl lg:text-3xl font-bold my-2">You might need to see also...
+      <p class="head_sections md:mx-40 lg:mx-40 mx-2 text-2xl lg:text-3xl font-bold my-2">{{ "SEE_MORE" |
+        translate }}
       </p>
       <div class=" grid grid-cols-2 gap-3">
         <div class="col-span-4 md:col-span-2 row-span-2">
