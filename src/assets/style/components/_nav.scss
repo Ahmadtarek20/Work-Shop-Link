@@ -146,8 +146,6 @@
   .sidebar span {
     text-align: #{$start};
   }
-
-
   @include respond(phone) {
     .sidebar .nav_list , .sidebar .nav_list_footer{
       margin-#{$start}: 0rem;

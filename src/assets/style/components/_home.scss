@@ -124,18 +124,6 @@
   //   url(../../images/baner-section-status.png);
   background-color: $unnamed-color-193f3d;
 
-  .table_status_map{
-    tr{
-      color: $unnamed-color-ffffff;
-  }
-   td{
-    color: $border-color;
-    padding-#{$end}: 35px;
-    padding-top: 15px;
-  }
-
-  }
-
   }
   @include respond(tab-land) {
     .baner-section{

@@ -19,8 +19,6 @@ export class FontsService {
     } else {
       this.fontsDefaultSubject.next('fontX3')
     }
-    console.log(fontData);
-
   }
 
 }
