@@ -3,9 +3,10 @@
   <div class="sidebar" [class]="sideBarService.sideBarSubject |async">
     <app-nav></app-nav>
   </div>
-  <div class="main-section main" [class]="themeService.peresentThemeSubject | async"
-    [class]="fontsService.fontsDefaultSubject |async">
-    <router-outlet></router-outlet>
+  <div [class]="fontsService.fontsDefaultSubject |async">
+    <div class="main-section main" [class]="themeService.peresentThemeSubject | async">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
 <app-footer></app-footer>

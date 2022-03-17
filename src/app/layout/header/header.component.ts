@@ -13,7 +13,6 @@ import { ThemsService } from 'src/app/services/style/thems.service';
 export class HeaderComponent implements OnInit {
 
   theme = localStorage.getItem('theme');
-  darkMood: boolean = false;
   constructor(
     public sideBarService: SidebarService,
     public themeService: ThemsService,
@@ -54,10 +53,5 @@ export class HeaderComponent implements OnInit {
 
   changeTheme() {
     this.themeService.changeTheme();
-    if (this.darkMood == false) {
-      this.darkMood = true;
-    } else {
-      this.darkMood = false;
-    }
   }
 }

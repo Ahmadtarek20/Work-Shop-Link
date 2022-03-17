@@ -6,18 +6,18 @@
       <span>Filter by:</span>
       <form [formGroup]="filterForm">
         <div class="flex justify-center items-center">
-          <div class="mb-2 relative ">
-            <input [matDatepicker]="pickId1" name="started-date" formControlName="from" class="form-control date"
-              placeholder="Date" />
+          <div class="form-group ml-2 mb-2 relative ">
+            <input [matDatepicker]="pickId1" name="started-date" formControlName="from" class="form-control"
+              placeholder="By Date From" />
             <mat-datepicker #pickId1></mat-datepicker>
-            <mat-datepicker-toggle class="input-icon date-picker absolute  w-full" [for]="pickId1">
+            <mat-datepicker-toggle class=" absolute top-0 w-full flex justify-end" [for]="pickId1">
             </mat-datepicker-toggle>
           </div>
-          <div class="mb-2 relative ">
-            <input [matDatepicker]="pickId2" name="started-date" formControlName="to" class="form-control date"
-              placeholder="Date" />
+          <div class="form-group ml-2 mb-2 relative ">
+            <input [matDatepicker]="pickId2" name="started-date" formControlName="to" class="form-control"
+              placeholder="By Date To" />
             <mat-datepicker #pickId2></mat-datepicker>
-            <mat-datepicker-toggle class="input-icon date-picker absolute w-full" [for]="pickId2">
+            <mat-datepicker-toggle class=" absolute top-0 w-full flex justify-end" [for]="pickId2">
             </mat-datepicker-toggle>
           </div>
 
