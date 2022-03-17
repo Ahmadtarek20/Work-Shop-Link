@@ -1,4 +1,7 @@
 @mixin biDirectional($start, $end) {
+
+//Section Banaras Maps
+
   .banar_section {
     height: 80vh;
     background-image:
@@ -94,9 +97,7 @@
   }
 
 
-
-
-
+//Section Opportunities Maps
 
   .baner-section{
     height: 70vh;
@@ -155,6 +156,8 @@
       overflow-x: scroll;
   }
   }
+
+//Section News Home
 
 
   .news-section{

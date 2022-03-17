@@ -2,7 +2,7 @@
   <!-- Logo text or image -->
   <div class="h-full flex items-center justify-between ">
 
-    <img class="mr-5 rad-img pointer" routerLink="/" width="100vh" src="../../../assets/images/LinkDev_white@2x.png">
+    <img class="mr-5 pointer " routerLink="/" width="100vh" src="../../../assets/images/LinkDev_white@2x.png">
 
 
   </div>
@@ -32,12 +32,7 @@
       </div>
 
     </li>
-    <!-- <li class="ml-6 res-tab">
-      <div class="py-3  md:text-xl   pointer flex justify-center text-center">
-        <p>EN <i class='bx bx-chevron-down'></i>
-        </p>
-      </div>
-    </li> -->
+
     <li class="ml-6 res-tab">
       <div class="py-3  md:text-xl   pointer flex justify-center text-center" ngbDropdown>
         <p *ngIf="languageService.langauge.value == 'ar'" id="dropdownBasic1" ngbDropdownToggle>AR <i

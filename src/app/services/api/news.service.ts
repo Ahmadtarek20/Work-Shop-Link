@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, observable, Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { baseUrl } from 'src/environments/environment';
 import { News } from './../../Models/news';
 
@@ -15,12 +15,12 @@ export class NewsService {
   ) {
   }
 
-  getNewsList(params: {} = {}): Observable<any[]> {
-    return this.http.get<any[]>(baseUrl + this.apiUrl, { params: { ...params } });
+  getNewsList(params: {} = {}): Observable<News[]> {
+    return this.http.get<News[]>(baseUrl + this.apiUrl, { params: { ...params } });
   }
 
-  getNewsItem(id: any): Observable<any> {
-    return this.http.get<any>(baseUrl + `${this.apiUrl}/News/${id}`);
+  getNewsItem(id: any): Observable<News> {
+    return this.http.get<News>(baseUrl + `${this.apiUrl}/News/${id}`);
   }
 
 
