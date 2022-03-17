@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChangeLanguageService } from 'src/app/core/services/change-language.service';
 import { SidebarService } from 'src/app/core/services/sidebar.service';
+import { FontsService } from 'src/app/services/style/fonts.service';
 import { ThemsService } from 'src/app/services/style/thems.service';
 ;
 
@@ -17,6 +18,7 @@ export class HeaderComponent implements OnInit {
     public sideBarService: SidebarService,
     public themeService: ThemsService,
     public languageService: ChangeLanguageService,
+    public fontsService: FontsService,
 
 
   ) { }
@@ -38,7 +40,6 @@ export class HeaderComponent implements OnInit {
       localStorage.setItem('lang', 'ar')
       this.languageService.langauge.next('ar')
     }
-
     document
       .querySelector('body')!
       .setAttribute('dir', localStorage.getItem('lang') == 'ar' ? 'rtl' : 'ltr')
@@ -47,6 +48,9 @@ export class HeaderComponent implements OnInit {
       .setAttribute('lang', localStorage.getItem('lang') == 'ar' ? 'ar' : 'en')
   }
 
+  changFont(fontX: any) {
+    this.fontsService.changeFontSite(fontX)
+  }
 
   changeTheme() {
     this.themeService.changeTheme();

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SidebarService } from 'src/app/core/services/sidebar.service';
+import { FontsService } from 'src/app/services/style/fonts.service';
 import { ThemsService } from 'src/app/services/style/thems.service';
 
 @Component({
@@ -16,6 +17,7 @@ export class MainComponent {
   constructor(
     public themeService: ThemsService,
     public sideBarService: SidebarService,
+    public fontsService: FontsService,
 
   ) {
   }

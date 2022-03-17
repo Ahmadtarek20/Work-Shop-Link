@@ -3,7 +3,8 @@
   <div class="sidebar" [class]="sideBarService.sideBarSubject |async">
     <app-nav></app-nav>
   </div>
-  <div class="main-section main" [class]="themeService.peresentThemeSubject | async">
+  <div class="main-section main" [class]="themeService.peresentThemeSubject | async"
+    [class]="fontsService.fontsDefaultSubject |async">
     <router-outlet></router-outlet>
   </div>
 </div>
