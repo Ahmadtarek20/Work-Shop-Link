@@ -14,6 +14,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home/home.component';
 import { NewsCardModule } from 'src/app/shared/news-card/news-card.module';
 import { LoaderModule } from 'src/app/shared/loader/loader.module';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { createTranslateLoader } from 'src/app/app.module';
+import { HttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -31,10 +34,17 @@ import { LoaderModule } from 'src/app/shared/loader/loader.module';
     LayoutModule,
     CoreModule,
     SharedModule,
-    LoaderModule
+    LoaderModule,
 
 
-    // tranlation
+    //Translate
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    }),
 
   ]
 })

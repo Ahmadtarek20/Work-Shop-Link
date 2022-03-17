@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { ChangeLanguageService } from 'src/app/core/services/change-language.service';
 import { SidebarService } from 'src/app/core/services/sidebar.service';
 import { FontsService } from 'src/app/services/style/fonts.service';
@@ -18,7 +19,7 @@ export class HeaderComponent implements OnInit {
     public themeService: ThemsService,
     public languageService: ChangeLanguageService,
     public fontsService: FontsService,
-
+    private translate: TranslateService,
 
   ) { }
 
@@ -35,9 +36,11 @@ export class HeaderComponent implements OnInit {
     if (localStorage.getItem('lang') == 'ar') {
       localStorage.setItem('lang', 'en')
       this.languageService.langauge.next('en')
+      this.translate.use('en')
     } else if (localStorage.getItem('lang') == 'en') {
       localStorage.setItem('lang', 'ar')
       this.languageService.langauge.next('ar')
+      this.translate.use('ar')
     }
     document
       .querySelector('body')!

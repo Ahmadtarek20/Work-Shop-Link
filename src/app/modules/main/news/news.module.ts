@@ -11,6 +11,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { NewsCardModule } from 'src/app/shared/news-card/news-card.module';
 import { LoaderModule } from 'src/app/shared/loader/loader.module';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { createTranslateLoader } from 'src/app/app.module';
 
 
 @NgModule({
@@ -30,6 +33,15 @@ import { LoaderModule } from 'src/app/shared/loader/loader.module';
     MatDialogModule,
     MatDatepickerModule,
     MatNativeDateModule,
+
+    //Translate
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    }),
   ]
 })
 export class NewsModule { }

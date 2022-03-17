@@ -10,6 +10,8 @@ import { RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { createTranslateLoader } from '../app.module';
 
 
 @NgModule({
@@ -25,6 +27,15 @@ import { FooterComponent } from './footer/footer.component';
 
     NgSelectModule,
     RouterModule,
+
+    //Translate
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    }),
 
   ],
   exports: [

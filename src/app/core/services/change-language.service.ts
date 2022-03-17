@@ -7,10 +7,10 @@ import { BehaviorSubject, Subject } from 'rxjs';
 export class ChangeLanguageService {
   langauge: any = new BehaviorSubject<any>('en')
   constructor() {
-    if (localStorage.getItem('lang') == 'ar') {
-      this.langauge.next('ar')
-    } else {
+    if (localStorage.getItem('lang') == 'en') {
       this.langauge.next('en')
+    } else {
+      this.langauge.next('ar')
     }
 
 

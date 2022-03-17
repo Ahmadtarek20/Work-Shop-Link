@@ -14,7 +14,12 @@ import { CoreModule } from './core/core.module';
 import { LayoutModule } from './layout/layout.module';
 
 import { ApiInterceptorProvider } from './core/interceptors/api.interceptor';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, '../assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -31,7 +36,16 @@ import { ApiInterceptorProvider } from './core/interceptors/api.interceptor';
     LayoutModule,
 
     NgbModule,
-    NgSelectModule
+    NgSelectModule,
+
+    //Translate
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    }),
   ],
   providers: [
     ApiInterceptorProvider,

@@ -53,7 +53,7 @@
   }
 
 
-  @include respond(tab-port) {
+  @include respond(tab-land) {
    .list-reset .res-tab{
      display: none;
    }
