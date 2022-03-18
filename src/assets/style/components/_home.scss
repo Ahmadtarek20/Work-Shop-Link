@@ -96,6 +96,24 @@
     }
   }
 
+.text_vertcal{
+  position: absolute;
+  top: 50%;
+  #{$start}: -40%;
+  transform: translate(-50%,-50%);
+  text-transform: uppercase;
+  color: $unnamed-color-efeeee;
+  transform: rotate(-90deg);
+}
+.text_vertcal_ar{
+  position: absolute;
+  top: 50%;
+  #{$start}: 16%;
+  transform: translate(-50%,-50%);
+  text-transform: uppercase;
+  color: $unnamed-color-efeeee;
+  transform: rotate(-90deg);
+}
 
 //Section Opportunities Maps
 
@@ -108,12 +126,13 @@
   .baner-section-status {
     width: 12.2%;
     height: 100%;
-    background-size: cover;
+    // background-size: cover;
     position: relative;
-    background-position: top;
+    // background-position: top;
 
-    background-image:
-     url(../../images/banar-label-data.png);
+    background-color: $unnamed-color-193f3d;
+    // background-image:
+    //  url(../../images/banar-label-data.png);
   }
   .baner-section-label {
    width: 89%;
@@ -155,18 +174,19 @@
     align-items: center;
   }
   .news-section-data {
-    width: 13%;
+    width: 12.2%;
     height: 100%;
-    background-size: cover;
+    // background-size: cover;
     position: relative;
-    background-position: top;
+   // background-position: top;
 
-    background-image:
-     url(../../images/news-data-section.png);
+   background-color: $unnamed-color-193f3d;
+    // background-image:
+    //  url(../../images/news-data-section.png);
   }
   .news-section-news-label {
-      width: 86.8%;
-   height: 100%;
+    width: 86.5%;
+    height: 100%;
   //  max-width: 86.8%;
   }
 

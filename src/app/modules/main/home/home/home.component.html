@@ -135,7 +135,12 @@
 
 
 <div class="baner-section">
-  <div class="baner-section-status border-right"></div>
+  <div class="baner-section-status border-right ">
+    <p class="text_vertcal text-4xl " *ngIf="languageService.langauge.value == 'en'">{{ "OPPORTUNITIES" |translate }}
+    </p>
+    <p class="text_vertcal_ar text-4xl " *ngIf="languageService.langauge.value == 'ar'">{{ "OPPORTUNITIES" |translate }}
+    </p>
+  </div>
   <div class="baner-section-label">
     <div class="px-14 py-12">
       <table class="table_status_map ">
@@ -164,7 +169,12 @@
 
 
 <div class="news-section">
-  <div class="news-section-data border-right"></div>
+  <div class="news-section-data border-right">
+    <p class="text_vertcal text-4xl " *ngIf="languageService.langauge.value == 'en'">{{ "LATEST_NEWS" |translate }} </p>
+    <p class="text_vertcal_ar text-4xl " *ngIf="languageService.langauge.value == 'ar'">{{ "LATEST_NEWS" |translate }}
+    </p>
+
+  </div>
   <div class="news-section-news-label ">
     <div class="flex justify-end items-center mx-16 my-6 text-gray-400 pointer" [routerLink]="['/news']"> {{ "MORE"
       |translate }}
