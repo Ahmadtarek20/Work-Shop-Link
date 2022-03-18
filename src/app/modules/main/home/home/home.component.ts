@@ -59,9 +59,9 @@ export class HomeComponent implements OnInit {
       this.numberOfBanner = newNumber
       const found = this.banaras.find((element: any) => element.id == newNumber);
       this.numberOfBanner = found.id
-      this.labelOfBanner = found.label
-      this.dataOfBanner = found.data
-      this.secondDataOfBanner = found.secondData
+      this.labelOfBanner = found.Category
+      this.dataOfBanner = found.Title
+      this.secondDataOfBanner = found.secondTitle
       this.urlBanner = found.url
     } else {
       this.resetBanner()
@@ -77,18 +77,18 @@ export class HomeComponent implements OnInit {
       this.numberOfBanner = newNumber
       const found = this.banaras.find((element: any) => element.id == newNumber);
       this.numberOfBanner = found.id
-      this.labelOfBanner = found.label
-      this.dataOfBanner = found.data
-      this.secondDataOfBanner = found.secondData
+      this.labelOfBanner = found.Category
+      this.dataOfBanner = found.Title
+      this.secondDataOfBanner = found.secondTitle
       this.urlBanner = found.url
     }
   }
 
   resetBanner() {
     this.numberOfBanner = this.banaras[0].id
-    this.labelOfBanner = this.banaras[0].label
-    this.dataOfBanner = this.banaras[0].data
-    this.secondDataOfBanner = this.banaras[0].secondData
+    this.labelOfBanner = this.banaras[0].Category
+    this.dataOfBanner = this.banaras[0].Title
+    this.secondDataOfBanner = this.banaras[0].secondTitle
     this.urlBanner = this.banaras[0].url
   }
 
