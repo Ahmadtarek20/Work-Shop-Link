@@ -18,6 +18,7 @@ export class NewsListComponent implements OnInit {
   pages: Number[] = [];
   loadingError = false
   loading = false
+  isFilterData: boolean = false
   constructor(
     private newsService: NewsService,
     public languageService: ChangeLanguageService,
@@ -122,6 +123,7 @@ export class NewsListComponent implements OnInit {
       let newsFilter = this.newsList.filter((item: any) => item.title.toLowerCase().includes(filterData.searchInput.toLowerCase()));
       this.newsList = newsFilter;
     }
+    this.isFilterData = true
   }
 
   resetFilter() {
@@ -129,6 +131,7 @@ export class NewsListComponent implements OnInit {
       this.filterForm.controls[key].setValue(null);
     });
     this.getNewsList();
+    this.isFilterData = false
   }
 
 }

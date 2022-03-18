@@ -65,7 +65,7 @@
     </div>
 
   </div>
-  <div class="flex justify-center items-center mx-16 py-6 text-gray-400">
+  <div class="flex justify-center items-center mx-16 py-6 text-gray-400" *ngIf="!isFilterData">
     <i class='bx bx-right-arrow-alt p-2 mx-1 border-solid border-2 border-gray-400 rounded-full text-gray-400 pointer'
       *ngIf="pageNumber != 1 && languageService.langauge.value == 'ar'" (click)="previousPage()"></i>
 
