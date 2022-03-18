@@ -38,7 +38,7 @@
         </div>
 
         <div class="flex justify-start my-1 tab-res-mob">
-          <div class=" border-solid border-2 border-white rounded-full pointer" (click)="next()">
+          <div class=" border-solid border-2 border-white rounded-full pointer" (click)="onClickNewTab(urlBanner)">
             <span class="text-white block pt-1 mx-2">{{ "MORE" |translate }}</span>
             <i class='bx bx-right-arrow-alt text-white p-1 mx-2' *ngIf="languageService.langauge.value == 'en'"></i>
             <i class='bx bx-arrow-back text-white p-1 mx-2' *ngIf="languageService.langauge.value == 'ar'"></i>

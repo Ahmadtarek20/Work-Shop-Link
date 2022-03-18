@@ -21,6 +21,8 @@ export class HomeComponent implements OnInit {
   labelOfBanner: any;
   dataOfBanner: any;
   secondDataOfBanner: any;
+  urlBanner: any;
+
   constructor(
     private newsService: NewsService,
     public languageService: ChangeLanguageService,
@@ -60,6 +62,7 @@ export class HomeComponent implements OnInit {
       this.labelOfBanner = found.label
       this.dataOfBanner = found.data
       this.secondDataOfBanner = found.secondData
+      this.urlBanner = found.url
     } else {
       this.resetBanner()
     }
@@ -77,6 +80,7 @@ export class HomeComponent implements OnInit {
       this.labelOfBanner = found.label
       this.dataOfBanner = found.data
       this.secondDataOfBanner = found.secondData
+      this.urlBanner = found.url
     }
   }
 
@@ -85,6 +89,13 @@ export class HomeComponent implements OnInit {
     this.labelOfBanner = this.banaras[0].label
     this.dataOfBanner = this.banaras[0].data
     this.secondDataOfBanner = this.banaras[0].secondData
+    this.urlBanner = this.banaras[0].url
+  }
+
+  onClickNewTab(event: any) {
+    if (event != '') {
+      window.open(event);
+    }
   }
 
 }
