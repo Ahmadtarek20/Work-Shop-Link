@@ -31,7 +31,6 @@
        position: absolute;
        bottom: 0px;
        #{$end}: 0px;
-      //  height: 22vh;
       max-height: 22vh;
        .react_investment{
         background-color: $unnamed-color-193f3d;
@@ -126,21 +125,14 @@
   .baner-section-status {
     width: 12.2%;
     height: 100%;
-    // background-size: cover;
     position: relative;
-    // background-position: top;
-
     background-color: $unnamed-color-193f3d;
-    // background-image:
-    //  url(../../images/banar-label-data.png);
   }
   .baner-section-label {
    width: 89%;
    height: 100%;
    background-size: cover;
    position: relative;
-  //  background-image:
-  //   url(../../images/baner-section-status.png);
   background-color: $unnamed-color-193f3d;
 
   }
@@ -176,18 +168,14 @@
   .news-section-data {
     width: 12.2%;
     height: 100%;
-    // background-size: cover;
     position: relative;
-   // background-position: top;
 
    background-color: $unnamed-color-193f3d;
-    // background-image:
-    //  url(../../images/news-data-section.png);
+
   }
   .news-section-news-label {
-    width: 86.5%;
+    width: 86.7%;
     height: 100%;
-  //  max-width: 86.8%;
   }
 
   @include respond(tab-land) {

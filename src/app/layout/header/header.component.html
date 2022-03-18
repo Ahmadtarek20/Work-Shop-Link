@@ -42,10 +42,6 @@
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="menue-open">
           <button ngbDropdownItem (click)="changeLanguage()" class="sm:text-sm text-center">{{ "SYSTEM_LANGUAGE" |
             translate }}</button>
-
-
-
-
         </div>
 
       </div>
@@ -57,6 +53,36 @@
           translate }}</button>
       </div>
 
+    </li>
+
+    <li class="ml-6 menue_res">
+      <div class="py-3  md:text-xl   pointer flex justify-center text-center" ngbDropdown>
+        <p id="dropdownBasic1" ngbDropdownToggle> <i class='bx bx-list-ul'></i>
+        </p>
+
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="menue-open ">
+          <button ngbDropdownItem class=" text-center " (click)="changeTheme()">
+            <i class='bx bxs-moon icon_menu_rs'></i>
+          </button>
+          <button ngbDropdownItem class=" text-center ">
+            <i class='bx bxs-search icon_menu_rs'></i>
+          </button>
+          <button ngbDropdownItem class=" text-center ">
+            <div class="mb-2 md:text-xl pointer inline">
+              <span class="text-base  text-red-800" (click)="changFont('x1')">A</span>
+              <span class="text-lg  text-red-800" (click)="changFont('x2')">A</span>
+              <span class="text-2xl  text-red-800" (click)="changFont('x3')">A</span>
+            </div>
+          </button>
+          <button ngbDropdownItem (click)="changeLanguage()" class="text-center">{{
+            "SYSTEM_LANGUAGE" |
+            translate }}</button>
+        </div>
+
+
+
+
+      </div>
     </li>
 
     <li class="ml-6 pr-4">

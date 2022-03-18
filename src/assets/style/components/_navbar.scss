@@ -57,7 +57,19 @@
    .list-reset .res-tab{
      display: none;
    }
+   .menue_res{
+    display: block;
   }
+
+  }
+}
+
+.menue_res{
+  display: none;
+}
+
+.icon_menu_rs{
+  color: #a0241b !important;
 }
 
 @import '../abstract/direction';
