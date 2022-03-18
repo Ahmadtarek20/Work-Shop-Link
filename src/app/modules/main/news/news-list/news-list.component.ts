@@ -106,16 +106,12 @@ export class NewsListComponent implements OnInit {
   }
 
 
-
-
   onSubmit() {
     let filterData = {
       ...this.filterForm.value
     }
     if (filterData.from != null) {
-      let newsFilter = this.newsList.filter((item: any) => new Date(item.published).toDateString() == new Date(filterData.from).toDateString());
-      console.log(newsFilter);
-
+      let newsFilter = this.newsList.filter((item: any) => new Date(item.published).toDateString() >= new Date(filterData.from).toDateString());
       this.newsList = newsFilter;
     }
     if (filterData.to != null) {
