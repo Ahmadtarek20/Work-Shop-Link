@@ -47,6 +47,9 @@
   .border-bottom{
     border-bottom: 1px solid $border-color;
   }
+  .border-top{
+    border-top: 1px solid $border-color;
+  }
   .border-left{
     border-#{$start}: 1px solid $border-color;
     padding-#{$start}: 20px;

@@ -135,10 +135,11 @@
 
 
 <div class="baner-section">
-  <div class="baner-section-status border-right ">
+  <div class="baner-section-status border-right border-bottom">
     <p class="text_vertcal text-4xl " *ngIf="languageService.langauge.value == 'en'">{{ "OPPORTUNITIES" |translate }}
     </p>
-    <p class="text_vertcal_ar text-4xl " *ngIf="languageService.langauge.value == 'ar'">{{ "OPPORTUNITIES" |translate }}
+    <p class="text_vertcal_ar text-4xl px-12" *ngIf="languageService.langauge.value == 'ar'">{{ "OPPORTUNITIES"
+      |translate }}
     </p>
   </div>
   <div class="baner-section-label">
@@ -169,9 +170,11 @@
 
 
 <div class="news-section">
-  <div class="news-section-data border-right">
-    <p class="text_vertcal text-4xl " *ngIf="languageService.langauge.value == 'en'">{{ "LATEST_NEWS" |translate }} </p>
-    <p class="text_vertcal_ar text-4xl " *ngIf="languageService.langauge.value == 'ar'">{{ "LATEST_NEWS" |translate }}
+  <div class="news-section-data  border-right border-bottom border-top">
+    <p class="text_vertcal text-4xl px-3" *ngIf="languageService.langauge.value == 'en'">{{ "LATEST_NEWS" |translate }}
+    </p>
+    <p class="text_vertcal_ar text-4xl px-3" *ngIf="languageService.langauge.value == 'ar'">{{ "LATEST_NEWS" |translate
+      }}
     </p>
 
   </div>
