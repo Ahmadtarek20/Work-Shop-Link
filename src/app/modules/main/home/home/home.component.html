@@ -179,12 +179,12 @@
 
   </div>
   <div class="news-section-news-label ">
-    <div class="flex justify-end items-center mx-16 my-6 text-gray-400 pointer" [routerLink]="['/news']"> {{ "MORE"
+    <div class="flex justify-end items-center mx-16 my-6 text-gray-400 "> {{ "MORE"
       |translate }}
-      <i class='bx bx-right-arrow-alt  p-1 mx-2 border-solid border-2 border-gray-400 rounded-full text-gray-400'
-        *ngIf="languageService.langauge.value == 'en'"></i>
-      <i class='bx bx-arrow-back  p-1 mx-2 border-solid border-2 border-gray-400 rounded-full text-gray-400'
-        *ngIf="languageService.langauge.value == 'ar'"></i>
+      <i class='bx bx-right-arrow-alt  p-1 mx-2 border-solid border-2 border-gray-400 rounded-full text-gray-400 pointer'
+        *ngIf="languageService.langauge.value == 'en'" [routerLink]="['/news']"></i>
+      <i class='bx bx-arrow-back  p-1 mx-2 border-solid border-2 border-gray-400 rounded-full text-gray-400 pointer'
+        *ngIf="languageService.langauge.value == 'ar'" [routerLink]="['/news']"></i>
     </div>
 
     <div class="component-loader" (errorCallback)="getNewsList()" [errorMessage]="'error'" component-loader
@@ -202,11 +202,6 @@
         </div>
 
       </div>
-      <!-- <section class="mx-5 flex  justify-center section_card ">
-        <div class="news-card mx-2 my-1" *ngFor="let newsItem of newsList">
-          <app-news-card [newsItem]='newsItem'></app-news-card>
-        </div>
-      </section> -->
 
     </div>
 

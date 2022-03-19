@@ -36,6 +36,7 @@ export class HomeComponent implements OnInit {
     document.getElementsByClassName('nav_list')[0].className = 'nav_list  border-bottom border-left';
     document.getElementsByClassName('nav_list_footer')[0].className = 'nav_list_footer flex justify-between text-center px-6 border-left';
     document.getElementsByClassName('footer_spam')[0].className = 'footer_spam border-right';
+
   }
   getNewsList() {
     this.loading = true

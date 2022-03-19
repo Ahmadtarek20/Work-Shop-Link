@@ -8,8 +8,6 @@ import { SidebarService } from 'src/app/core/services/sidebar.service';
 })
 export class NavComponent implements OnInit {
 
-  labelItem: string = ''
-  show: string = 'inActive'
   constructor(
     public sideBarService: SidebarService,
   ) { }
@@ -19,18 +17,5 @@ export class NavComponent implements OnInit {
 
   onToggleSideBar() {
     this.sideBarService.changeSideBar()
-  }
-
-  openMenu(label: string) {
-    if (this.show == 'active') {
-      this.show = 'inActive'
-    } else {
-      this.show = 'active'
-    }
-    this.labelItem = label
-  }
-
-  closeMenu() {
-    this.show = 'inActive'
   }
 }
