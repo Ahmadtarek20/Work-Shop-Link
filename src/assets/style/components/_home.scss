@@ -78,7 +78,17 @@
      width: 80px;
      height: 80px;
      background-color: transparent;
+     &:hover{
+       background-color: $unnamed-color-efeeee;
+       p{
+         color: $unnamed-color-b27208 !important;
+       }
+       img{
+        filter: sepia(200%) !important;
+       }
+     }
    }
+
 
    @include respond(tab-land) {
     .react_investment, .section_cercile{

@@ -12,6 +12,16 @@
     width: 87%;
     position: relative;
   }
+  @include respond(tab-land) {
+      .nav_spam{
+        display: none;
+      }
+      .nav_data{
+
+          width: 100%;
+        }
+      }
+
   .sidebar {
     position: fixed;
     #{$end}: 0;
