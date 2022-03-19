@@ -1,5 +1,17 @@
 @import "../abstract/colors";
 @mixin biDirectional($start, $end) {
+
+  .nav_section{
+    width: 100%;
+    height: 80vh;
+  }
+  .nav_spam{
+    width: 14.9%;
+  }
+  .nav_data{
+    width: 87%;
+    position: relative;
+  }
   .sidebar {
     position: fixed;
     #{$end}: 0;
@@ -30,18 +42,12 @@
       position: absolute;
   }
 
-  .sidebar .logo-details .logo_name {
-    color: $primary-bg;
-    font-size: 20px;
-    font-weight: 600;
-    opacity: 0;
-    transition: all 0.5s ease;
-  }
-  .sidebar.open .logo-details .icon,
-  .sidebar.open .logo-details .logo_name {
+
+  .sidebar.open  .icon,
+  .sidebar.open  .logo_name {
     opacity: 1;
   }
-  .sidebar .logo-details #btn {
+  .sidebar  #btn {
     position: absolute;
     top: 50%;
     #{$start}: 0;
@@ -53,21 +59,17 @@
     cursor: pointer;
     transition: all 0.5s ease;
   }
-  .sidebar.open .logo-details #btn {
+  .sidebar.open  #btn {
     text-align: #{$start};
   }
 
   .sidebar .nav_list {
-    margin-top: 4.7rem;
-    // height: 80%;
     overflow-y: scroll;
     overflow-x: hidden;
-    margin-#{$start}: 13.7rem;
     padding: 5rem;
     letter-spacing: 0px;
   }
   .sidebar .nav_list_footer{
-    margin-#{$start}: 13.7rem;
     height: 4rem;
     color: $unnamed-color-ffffff;
   }
@@ -160,6 +162,9 @@
   .border-non{
     border: 1px solid transparent;
   }
+}
+.margin_nav_non{
+  margin-top: 4.7rem;
 }
 
 

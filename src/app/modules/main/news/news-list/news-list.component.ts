@@ -33,6 +33,7 @@ export class NewsListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getNewsList();
+    document.getElementsByClassName('nav_data')[0].className = 'nav_data margin_nav_non border-left';
     document.getElementsByClassName('footer_spam')[0].className = 'footer_spam d-non';
     document.getElementsByClassName('nav_list')[0].className = 'nav_list  border-bottom border-non';
     document.getElementsByClassName('nav_list_footer')[0].className = 'nav_list_footer flex justify-between text-center px-6 border-non';

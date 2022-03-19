@@ -33,8 +33,9 @@ export class HomeComponent implements OnInit {
     this.resetBanner()
     this.getNewsList();
 
-    document.getElementsByClassName('nav_list')[0].className = 'nav_list  border-bottom border-left';
-    document.getElementsByClassName('nav_list_footer')[0].className = 'nav_list_footer flex justify-between text-center px-6 border-left';
+    document.getElementsByClassName('nav_data')[0].className = 'nav_data border-left';
+    document.getElementsByClassName('nav_list')[0].className = 'nav_list  border-bottom ';
+    document.getElementsByClassName('nav_list_footer')[0].className = 'nav_list_footer flex justify-between text-center px-6';
     document.getElementsByClassName('footer_spam')[0].className = 'footer_spam border-right';
 
   }
